@@ -32,7 +32,8 @@ This project is designed to automatically extract structured information from re
 ## 🚀 How to Use
 
 1. Open the notebook in Google Colab:  
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/your_username/cv-extractor-with-phi3/blob/main/phi3_cv_extractor.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Resul-Caliskan/CV-Extraction-Ai/blob/main/CV_Extraction_Ai.ipynb)
+
 
 2. Run the cells and upload a CV in PDF format  
 3. The AI will analyze the document  
