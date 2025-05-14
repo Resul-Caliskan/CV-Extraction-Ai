@@ -1,66 +1,69 @@
-# 💼 CV Information Extractor (with Phi-3 Mini)
+# 💼 CV Information Extractor with Phi-3 Mini
 
-> AI-powered resume analysis tool — Fast and accurate extraction using Microsoft’s Phi-3 Mini model!
-
----
+> AI-powered resume parser using Microsoft's Phi-3 Mini model  
+> 📄 → 🧠 → 📊 | From raw PDF to structured data in seconds
 
 ## 📌 Project Overview
 
-This project is designed to automatically extract structured information from resumes in PDF format using a large language model. Powered by **Microsoft's Phi-3 Mini**, it can identify key details such as:
+This project is an end-to-end tool for extracting structured information from CVs (in PDF format) using **Large Language Models**. With the help of **Microsoft's Phi-3 Mini**, it can intelligently identify and summarize the most important parts of a resume.
 
-- 👤 Name  
-- 📧 Email  
-- 📞 Phone number  
-- 🛠️ Skills  
-- 🌍 Spoken languages  
-- 💼 Work experience  
+## 🧪 Step-by-Step Pipeline
 
----
+| Step | Description |
+|------|-------------|
+| **1. Upload CV** | Upload a `.pdf` file containing a candidate's resume |
+| **2. CV Reader** | Use `PyMuPDF` to extract raw text from the uploaded PDF |
+| **3. Text Cleaning** | Clean the text using `NLTK` and standard Python (lowercasing, punctuation, stopword removal) |
+| **4. Model Load** | Load Microsoft's `Phi-3 Mini 4K Instruct` model from Hugging Face using PyTorch |
+| **5. Prompt Creation** | Create a structured prompt for information extraction |
+| **6. Text Generation** | Use the model to generate structured JSON-style output containing name, email, skills, etc. |
+| **7. Output Display** | Print or return the extracted structured data |
 
-## 🔧 Technologies Used
+## 🛠️ Technologies Used
 
-| Technology                 | Description                                     |
-|---------------------------|-------------------------------------------------|
-| Google Colab              | Development and testing environment             |
-| PyMuPDF (`fitz`)          | Extracts text from PDF files                    |
-| NLTK                      | Natural language preprocessing and stopwords    |
-| Hugging Face Transformers| Runs the Phi-3 Mini LLM                         |
-| PyTorch                   | Backend framework for deep learning             |
+- **Google Colab** – For quick and GPU-accelerated experimentation  
+- **PyMuPDF (`fitz`)** – PDF text extraction  
+- **NLTK** – Natural Language Toolkit for preprocessing  
+- **Hugging Face Transformers** – Interface to load Phi-3 Mini  
+- **PyTorch** – Deep learning backend  
+- **Phi-3 Mini 4K Instruct** – Lightweight and powerful LLM from Microsoft  
 
----
-
-## 🚀 How to Use
+## 🚀 Try it Out
 
 1. Open the notebook in Google Colab:  
    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Resul-Caliskan/CV-Extraction-Ai/blob/main/CV_Extraction_Ai.ipynb)
 
+2. Run each cell step-by-step  
+3. Upload a resume PDF when prompted  
+4. View structured data (name, email, phone, skills, experience, etc.)  
 
-2. Run the cells and upload a CV in PDF format  
-3. The AI will analyze the document  
-4. Get the structured output in a JSON-like format
+## 🧠 Extracted Information Includes
 
----
+```json
+{
+  "name": "",
+  "email": "",
+  "phone": "",
+  "skills": "",
+  "languages": "",
+  "experience": ""
+}
+```
 
-## 📦 Features
+## 🔮 Planned Features
 
-- ✅ Reads and cleans text from PDF files  
-- ✅ Preprocesses input (lowercasing, punctuation removal, stopword filtering)  
-- ✅ Extracts structured data using Phi-3 Mini  
-- ✅ Optimized for GPU (CUDA) acceleration  
-
----
-
-## 🧠 Future Improvements
-
-- [ ] Match CVs with job descriptions  
-- [ ] Batch processing for multiple resumes  
-- [ ] Native support for Turkish CVs  
-
----
+- Match resumes to job descriptions
+- Batch CV analysis
+- Multilingual support (e.g., Turkish)
+- Export results to CSV or JSON
 
 ## 📄 License
 
-This project is open-source under the MIT License — feel free to use, modify, and share!
+This project is licensed under the MIT License. Feel free to use, modify, and build upon it for personal or commercial purposes.
 
----
+## 🙋‍♂️ Author
 
+Resul Çalışkan  
+🤖 AI Enthusiast
+🔗 GitHub: [Resul-Caliskan](https://github.com/Resul-Caliskan)
+🔗 Linkedin: [Resul-Caliskan](https://www.linkedin.com/in/resul-caliskan/)
